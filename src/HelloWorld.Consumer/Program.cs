@@ -2,9 +2,10 @@
 using RabbitMQ.Client;
 using System.Text;
 
+Console.WriteLine("Consumer program started...");
+
 var factory = new ConnectionFactory() { HostName = "localhost" };
 
-// Consumer
 using (var connection = factory.CreateConnection())
 {
     using (var channel = connection.CreateModel())
