@@ -3,7 +3,7 @@ using RabbitMQ.Client;
 using System.Text;
 using System.Reflection;
 
-Console.WriteLine($"{Assembly.GetExecutingAssembly().FullName?.Split(',').First()} program started...");
+Console.WriteLine($"{Assembly.GetExecutingAssembly().FullName?.Split(',').FirstOrDefault()} program started...");
 
 var factory = new ConnectionFactory { HostName = "localhost" };
 
@@ -11,6 +11,9 @@ using (var connection = factory.CreateConnection())
 {
     using (var channel = connection.CreateModel())
     {
+        // Durability | In order to make sure that queue survives a RabbitMQ node restart, we need to declare it as durable (durable: true).
+        // Durability | RabbitMQ doesn't allow one to redefine an existing queue with different parameters and will return an error.
+        // Durability | So, rename the queue (queue: "workqueues2") to declare new one.
         channel.QueueDeclare(queue: "workqueues", durable: false, exclusive: false, autoDelete: false, arguments: null);
 
         var consumer = new EventingBasicConsumer(channel);
@@ -34,7 +37,6 @@ using (var connection = factory.CreateConnection())
 
         // autoAck: false => Worker sends Message Acknowledgement to RabbitMQ MANUALLY.
         channel.BasicConsume(queue: "workqueues", autoAck: false, consumer: consumer);
-
 
         Console.WriteLine(" Press [enter] to exit.");
         Console.ReadLine();

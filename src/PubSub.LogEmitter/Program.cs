@@ -10,16 +10,17 @@ using (var connection = factory.CreateConnection())
 {
     using (var channel = connection.CreateModel())
     {
-        channel.QueueDeclare(queue: "helloworld", durable: false, exclusive: false, autoDelete: false, arguments: null);
+        // ExchangeType.Fanout/Direct/Headers/Topic
+        channel.ExchangeDeclare(exchange: "pubsub", type: ExchangeType.Fanout);
 
         while (true)
         {
             var message = Console.ReadLine();
             var body = Encoding.UTF8.GetBytes(message);
 
-            channel.BasicPublish(exchange: "", routingKey: "helloworld", basicProperties: null, body: body);
+            channel.BasicPublish(exchange: "pubsub", routingKey: "", basicProperties: null, body: body);
 
-            Console.WriteLine(" Publisher sent message '{0}' to Receiver.", message);
+            Console.WriteLine(" TaskScheduler sent message '{0}' to Worker.", message);
         }
     }
 }

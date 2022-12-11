@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkQueues.TaskScheduler", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkQueues.Worker", "WorkQueues.Worker\WorkQueues.Worker.csproj", "{43581FCC-2983-42B5-82BF-EF32B41697A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubSub.LogEmitter", "PubSub.LogEmitter\PubSub.LogEmitter.csproj", "{E7D7BE8B-82E5-4664-BC84-E5B506E1BE7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubSub.LogReceiver", "PubSub.LogReceiver\PubSub.LogReceiver.csproj", "{8AB1BB77-9EB4-4A02-B329-F7617B3D8E55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{43581FCC-2983-42B5-82BF-EF32B41697A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43581FCC-2983-42B5-82BF-EF32B41697A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43581FCC-2983-42B5-82BF-EF32B41697A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7D7BE8B-82E5-4664-BC84-E5B506E1BE7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7D7BE8B-82E5-4664-BC84-E5B506E1BE7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7D7BE8B-82E5-4664-BC84-E5B506E1BE7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7D7BE8B-82E5-4664-BC84-E5B506E1BE7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB1BB77-9EB4-4A02-B329-F7617B3D8E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB1BB77-9EB4-4A02-B329-F7617B3D8E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB1BB77-9EB4-4A02-B329-F7617B3D8E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB1BB77-9EB4-4A02-B329-F7617B3D8E55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
