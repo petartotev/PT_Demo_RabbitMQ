@@ -2,7 +2,7 @@
 
 # Initial Setup
 
-1. Run the image in a Docker Container (on port 5672) locally:  
+1. Run the Image in a Docker Container (on port 5672) locally:  
 **docker run -d -it --rm --name rabbitmqcontainer -p 5672:5672 -p 15672:15672 rabbitmq:3.11-management**
 
 2. Open the Terminal of the **rabbitmqcontainer** in Docker Desktop and enter the following commands **:  
