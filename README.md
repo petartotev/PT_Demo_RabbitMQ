@@ -55,3 +55,17 @@ In order to have admin rights, you need to login with the default admin username
 ![PubSub](res/PubSub.png)
 
 ---
+
+## 4. Routing
+
+### Setup
+
+4. Run an instance of **Routing.DirectLogEmitter** in Console.
+
+5. Run an instance of **Routing.DirectLogReceiverAll** in Console.
+
+6. Run an instance of **Routing.DirectLogReceiverError** in Console.
+
+![Routing](res/Routing.png)
+
+---

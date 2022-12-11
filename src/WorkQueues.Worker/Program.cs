@@ -28,7 +28,7 @@ using (var connection = factory.CreateConnection())
             Console.WriteLine($"Worker will sleep for {sleepMilliseconds / 1000} seconds.");
             Thread.Sleep(sleepMilliseconds);
 
-            Console.WriteLine(" Worker received message '{0}' from TaskScheduler.", message);
+            Console.WriteLine("Worker received message '{0}' from TaskScheduler.", message);
 
             // Message Acknowledgement is sent by Worker MANUALLY to inform RabbitMQ that the message has been received and processed.
             // When RabbitMQ receives such Message Acknowledgement, it can safely remove this message from queue.
@@ -38,7 +38,7 @@ using (var connection = factory.CreateConnection())
         // autoAck: false => Worker sends Message Acknowledgement to RabbitMQ MANUALLY.
         channel.BasicConsume(queue: "workqueues", autoAck: false, consumer: consumer);
 
-        Console.WriteLine(" Press [enter] to exit.");
+        Console.WriteLine("Press [enter] to exit.");
         Console.ReadLine();
     }
 }

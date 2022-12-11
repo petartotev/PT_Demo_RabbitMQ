@@ -10,7 +10,7 @@ using (var connection = factory.CreateConnection())
 {
     using (var channel = connection.CreateModel())
     {
-        // ExchangeType.Fanout/Direct/Headers/Topic
+        // ExchangeType.Fanout broadcasts messages to all Consumers. (4 types - Direct, Fanout, Headers, Topic)
         channel.ExchangeDeclare(exchange: "pubsub", type: ExchangeType.Fanout);
 
         while (true)
@@ -20,7 +20,7 @@ using (var connection = factory.CreateConnection())
 
             channel.BasicPublish(exchange: "pubsub", routingKey: "", basicProperties: null, body: body);
 
-            Console.WriteLine(" TaskScheduler sent message '{0}' to Worker.", message);
+            Console.WriteLine("LogEmitter sent message '{0}' to LogReceiver.", message);
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Reflection;
 
 Console.WriteLine($"{Assembly.GetExecutingAssembly().FullName?.Split(',').FirstOrDefault()} program started...");
 
-var factory = new ConnectionFactory { HostName = "localhost" };
+var factory = new ConnectionFactory { HostName = "localhost", UserName = "guest", Password = "guest" };
 
 using (var connection = factory.CreateConnection())
 {
@@ -19,7 +19,7 @@ using (var connection = factory.CreateConnection())
         {
             var body = ea.Body.ToArray();
             var message = Encoding.UTF8.GetString(body);
-            Console.WriteLine(" Receiver received message '{0}' from Publisher.", message);
+            Console.WriteLine("Receiver received message '{0}' from Publisher.", message);
         };
 
         // Message Acknowledgement is sent by Consumer AUTOMATICALLY to inform RabbitMQ that the message has been received and processed.
@@ -27,7 +27,7 @@ using (var connection = factory.CreateConnection())
         // autoAck: true => Consumer sends Message Acknowledgement to RabbitMQ AUTOMATICALLY.
         channel.BasicConsume(queue: "helloworld", autoAck: true, consumer: consumer);
 
-        Console.WriteLine(" Press [enter] to exit.");
+        Console.WriteLine("Press [enter] to exit.");
         Console.ReadLine();
     }
 }

@@ -34,7 +34,7 @@ public class Program
                     // TaskScheduler uses 'Round-robin' distribution by default.
                     channel.BasicPublish(exchange: "", routingKey: "workqueues", basicProperties: null, body: body);
 
-                    Console.WriteLine(" TaskScheduler sent message '{0}' to Worker.", message);
+                    Console.WriteLine("TaskScheduler sent message '{0}' to Worker.", message);
                 }
             }
         }

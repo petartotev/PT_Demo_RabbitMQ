@@ -4,7 +4,7 @@ using System.Text;
 
 Console.WriteLine($"{Assembly.GetExecutingAssembly().FullName?.Split(',').FirstOrDefault()} program started...");
 
-var factory = new ConnectionFactory { HostName = "localhost" };
+var factory = new ConnectionFactory { HostName = "localhost", UserName = "guest", Password = "guest" };
 
 using (var connection = factory.CreateConnection())
 {
@@ -19,7 +19,7 @@ using (var connection = factory.CreateConnection())
 
             channel.BasicPublish(exchange: "", routingKey: "helloworld", basicProperties: null, body: body);
 
-            Console.WriteLine(" Publisher sent message '{0}' to Receiver.", message);
+            Console.WriteLine("Publisher sent message '{0}' to Receiver.", message);
         }
     }
 }
