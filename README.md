@@ -22,10 +22,10 @@ In order to have admin rights, you need to login with the default admin username
 
 ## 1. HelloWorld
 
+![HelloWorld_diagram](res/HelloWorld_diagram.png)
+
 ### Setup
-
 3. Run an instance of **HelloWorld.Producer** in Console.
-
 4. Run 1 or 2 instances of **HelloWorld.Consumer** in Console.
 
 ![HelloWorld](res/HelloWorld.png)
@@ -34,10 +34,10 @@ In order to have admin rights, you need to login with the default admin username
 
 ## 2. WorkQueues
 
+![WorkQueues_diagram](res/WorkQueues_diagram.png)
+
 ### Setup
-
 4. Run an instance of **WorkQueues.TaskScheduler** in Console.
-
 5. Run 1 or 2 instances of **WorkQueues.Worker** in Console.
 
 ![WorkQueues](res/WorkQueues.png)
@@ -46,10 +46,10 @@ In order to have admin rights, you need to login with the default admin username
 
 ## 3. PubSub (*Publish/Subscribe*)
 
+![PubSub_diagram](res/PubSub_diagram.png)
+
 ### Setup
-
 4. Run an instance of **PubSub.LogEmitter** in Console.
-
 5. Run 2 instances of **PubSub.LogReceiver** in Console.
 
 ![PubSub](res/PubSub.png)
@@ -58,14 +58,28 @@ In order to have admin rights, you need to login with the default admin username
 
 ## 4. Routing
 
+![Routing_diagram](res/Routing_diagram.png)
+
 ### Setup
-
 4. Run an instance of **Routing.DirectLogEmitter** in Console.
-
 5. Run an instance of **Routing.DirectLogReceiverAll** in Console.
-
 6. Run an instance of **Routing.DirectLogReceiverError** in Console.
 
 ![Routing](res/Routing.png)
+
+---
+
+## 5. Topics
+
+![Topics_diagram](res/Topics_diagram.png)
+
+### Setup
+4. Run an instance of **Routing.TopicEmitter** in Console.
+5. Run an instance of **Routing.TopicReceiverAll** in Console.
+6. Run an instance of **Routing.TopicReceiverOrange** in Console.
+7. Run an instance of **Routing.TopicReceiverOrangeFish** in Console.
+8. Run an instance of **Routing.TopicReceiverBlueGumball** in Console.
+
+![Topics](res/Topics.png)
 
 ---
