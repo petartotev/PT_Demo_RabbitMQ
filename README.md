@@ -25,8 +25,8 @@ In order to have admin rights, you need to login with the default admin username
 ![HelloWorld_diagram](res/HelloWorld_diagram.png)
 
 ### Setup
-3. Run an instance of **HelloWorld.Producer** in Console.
-4. Run 1 or 2 instances of **HelloWorld.Consumer** in Console.
+4. Run an instance of **HelloWorld.Producer** in Console.
+5. Run 1 or 2 instances of **HelloWorld.Consumer** in Console.
 
 ![HelloWorld](res/HelloWorld.png)
 
@@ -81,5 +81,17 @@ In order to have admin rights, you need to login with the default admin username
 8. Run an instance of **Routing.TopicReceiverBlueGumball** in Console.
 
 ![Topics](res/Topics.png)
+
+---
+
+## 5. RPC
+
+![RPC_diagram](res/RPC_diagram.png)
+
+### Setup
+4. Run an instance of **RPC.Server** in Console.
+5. Run an instance of **RPC.Client** in Console.
+
+![RPC](res/RPC.png)
 
 ---

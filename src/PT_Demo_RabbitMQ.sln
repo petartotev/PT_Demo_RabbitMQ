@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topics.TopicReceiverAll", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topics.TopicReceiverBlueGumball", "Topics.TopicReceiverBlueGumball\Topics.TopicReceiverBlueGumball.csproj", "{79650321-AF18-4508-A43E-64836D94981A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPC.RpcServer", "RPC.RpcServer\RPC.RpcServer.csproj", "{019A7059-C560-48CF-81E1-2778BF9BC4F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPC.RpcClient", "RPC.RpcClient\RPC.RpcClient.csproj", "{B3B49924-B4B3-4E37-BDC8-608785817D62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +97,14 @@ Global
 		{79650321-AF18-4508-A43E-64836D94981A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79650321-AF18-4508-A43E-64836D94981A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79650321-AF18-4508-A43E-64836D94981A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{019A7059-C560-48CF-81E1-2778BF9BC4F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{019A7059-C560-48CF-81E1-2778BF9BC4F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{019A7059-C560-48CF-81E1-2778BF9BC4F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{019A7059-C560-48CF-81E1-2778BF9BC4F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3B49924-B4B3-4E37-BDC8-608785817D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B49924-B4B3-4E37-BDC8-608785817D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3B49924-B4B3-4E37-BDC8-608785817D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3B49924-B4B3-4E37-BDC8-608785817D62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
