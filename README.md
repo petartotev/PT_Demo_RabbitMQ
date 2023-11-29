@@ -30,6 +30,10 @@ In order to have admin rights, you need to login with the default admin username
 
 ![HelloWorld](res/HelloWorld.png)
 
+N.B. Note that once the Producer publishes a message, you can go to the RabbitMQ Management Console (UI) and get the message (using GetMessage(s)) which will NOT prevent the Consumer from receiving it:
+
+![HelloWorld_UI](res/HelloWorld_UI.png)
+
 ---
 
 ## 2. WorkQueues
