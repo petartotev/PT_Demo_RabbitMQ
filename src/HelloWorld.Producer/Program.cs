@@ -4,7 +4,16 @@ using System.Text;
 
 Console.WriteLine($"{Assembly.GetExecutingAssembly().FullName?.Split(',').FirstOrDefault()} program started...");
 
-var factory = new ConnectionFactory { HostName = "localhost", UserName = "guest", Password = "guest" };
+var factory = new ConnectionFactory
+{
+    HostName = "localhost",
+    UserName = "guest",
+    Password = "guest",
+    //Port = 5672,
+    //RequestedConnectionTimeout = TimeSpan.FromDays(1),
+    //RequestedChannelMax = 10,
+    //MaxMessageSize = 1024,
+};
 
 using (var connection = factory.CreateConnection())
 {
